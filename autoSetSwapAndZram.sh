@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 自动获取物理内存大小
-physical_memory=((`cat /proc/meminfo | grep MemTotal | awk '{print $2}'`))
+physical_memory=`cat /proc/meminfo | grep MemTotal | awk '{print $2}'`
 
 swapSizeWarning() {
     echo ""
